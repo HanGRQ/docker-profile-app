@@ -25,9 +25,10 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=secret
     networks:
-       - profile-network
-    volumes:    
-      - ./data:/db/data
+      - profile-network
+    volumes:
+      - profiledata:/db/data
+
 
   mongo-express:
     container_name: express
@@ -43,3 +44,6 @@ services:
        - profile-network
     depends_on:
       - database  # 更新为新的服务名
+
+volumes:
+  profiledata:
