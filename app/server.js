@@ -7,7 +7,8 @@ import defaultErrHandler from "./errHandler/index.js";
 import "./db/index.js";
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT ;  
+
 
 app.use(cors());
 app.use(express.json());
